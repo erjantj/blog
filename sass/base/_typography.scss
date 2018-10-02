@@ -1,4 +1,4 @@
-$blockquote: $type-border !default;
+//$blockquote: $type-border !default;
 $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
@@ -10,102 +10,217 @@ $header-subtitle-font-family: $heading-font-family !default;
 .heading {
   font-family: $heading-font-family;
 }
-.sans { font-family: $sans; }
-.serif { font-family: $serif; }
-.mono { font-family: $mono; }
-
-body > header h1 {
-  font-size: 2.2em;
-  @extend .heading;
-  font-family: $header-title-font-family;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
+.sans {
+  font-family: $sans;
 }
-body > header h2 {
-  font-family: $header-subtitle-font-family;
+.serif {
+  font-family: $serif;
+}
+.mono {
+  font-family: $mono;
+}
+
+#sidebar {
+  h1 {
+    font-size: 1.5em;
+    @extend .heading;
+    font-family: $header-title-font-family;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin-bottom: 0.6667em;
+    a {
+      font-size: 1em;
+    }
+  }
+  h2 {
+    font-size: 0.8em;
+    line-height: 1em;
+    font-family: $header-subtitle-font-family;
+  }
+  a {
+    font-size: 0.7em;
+  }
+  li {
+    line-height: 1em;
+  }
 }
 
 body {
   line-height: 1.5em;
-  color: $text-color;
   @extend .serif;
 }
 h1 {
   font-size: 2.2em;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
-@media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+@media only screen and (min-width: 1101px) {
+  body {
+    font-size: 1.15em;
+  }
+  h1 {
+    font-size: 2.6em;
+    line-height: 1.2em;
+  }
 }
 
-#{headings()}{
+#{headings()} {
   @extend .heading;
   text-rendering: optimizelegibility;
   margin-bottom: 1em;
   font-weight: bold;
 }
-h2, section h1 {
+h2,
+section h1 {
   font-size: 1.5em;
 }
-h3, section h2, section section h1 {
+h3,
+section h2,
+section section h1 {
   font-size: 1.3em;
 }
-h4, section h3, section section h2, section section section h1 {
+h4,
+section h3,
+section section h2,
+section section section h1 {
   font-size: 1em;
 }
-h5, section h4, section section h3 {
-  font-size: .9em;
+h5,
+section h4,
+section section h3 {
+  font-size: 0.9em;
 }
-h6, section h5, section section h4, section section section h3 {
-  font-size: .8em;
-}
-
-p, article blockquote, ul, ol { margin-bottom: 1.5em; }
-
-ul { list-style-type: disc;
-  ul { list-style-type: circle; margin-bottom: 0px;
-    ul { list-style-type: square; margin-bottom: 0px; }}}
-
-ol { list-style-type: decimal;
-  ol { list-style-type: lower-alpha; margin-bottom: 0px;
-    ol { list-style-type: lower-roman; margin-bottom: 0px; }}}
-
-ul, ol { &, ul, ol { margin-left: 1.3em; }}
-ul, ol { ul, ol { margin-bottom: 0em; }}
-
-strong { font-weight: bold; }
-
-em { font-style: italic; }
-
-sup, sub { font-size: 0.75em; position: relative;  display: inline-block; padding: 0 .2em; line-height: .8em;}
-sup { top: -.5em; }
-sub { bottom: -.5em; }
-
-a[rev='footnote']{ font-size: .75em; padding: 0 .3em; line-height: 1; }
-
-q { font-style: italic;
-  &:before { content: "\201C"; }
-  &:after { content: "\201D"; }
+h6,
+section h5,
+section section h4,
+section section section h3 {
+  font-size: 0.8em;
 }
 
-em, dfn { font-style: italic; }
+p,
+article blockquote,
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
 
-strong, dfn { font-weight: bold; }
+ul {
+  list-style-type: disc;
+  ul {
+    list-style-type: circle;
+    margin-bottom: 0px;
+    ul {
+      list-style-type: square;
+      margin-bottom: 0px;
+    }
+  }
+}
 
-del, s { text-decoration: line-through; }
+ol {
+  list-style-type: decimal;
+  ol {
+    list-style-type: lower-alpha;
+    margin-bottom: 0px;
+    ol {
+      list-style-type: lower-roman;
+      margin-bottom: 0px;
+    }
+  }
+}
 
-abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+ul,
+ol {
+  &,
+  ul,
+  ol {
+    margin-left: 1.3em;
+  }
+}
+ul,
+ol {
+  ul,
+  ol {
+    margin-bottom: 0em;
+  }
+}
 
-pre, code, tt { @extend .mono; }
+strong {
+  font-weight: bold;
+}
 
-hr { margin-bottom: 0.2em; }
+em {
+  font-style: italic;
+}
 
-small { font-size: .8em; }
+sup,
+sub {
+  font-size: 0.75em;
+  position: relative;
+  display: inline-block;
+  padding: 0 0.2em;
+  line-height: 0.8em;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.5em;
+}
 
-big { font-size: 1.2em; }
+a[rev="footnote"] {
+  font-size: 0.75em;
+  padding: 0 0.3em;
+  line-height: 1;
+}
+
+q {
+  font-style: italic;
+  &:before {
+    content: "\201C";
+  }
+  &:after {
+    content: "\201D";
+  }
+}
+
+em,
+dfn {
+  font-style: italic;
+}
+
+strong,
+dfn {
+  font-weight: bold;
+}
+
+del,
+s {
+  text-decoration: line-through;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+pre,
+code,
+tt {
+  @extend .mono;
+}
+
+hr {
+  margin-bottom: 0.2em;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+big {
+  font-size: 1.2em;
+}
 
 article blockquote {
   $bq-margin: 1.2em;
@@ -114,13 +229,21 @@ article blockquote {
   font-size: 1.2em;
   line-height: 1.5em;
   padding-left: 1em;
-  border-left: 4px solid rgba($text-color-light, .5);
+  //border-left: 4px solid rgba($text-color-light, .5);
   cite {
     font-style: italic;
-    a { color: $text-color-light !important; word-wrap: break-word; }
-    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
+    a {
+      word-wrap: break-word;
+    }
+    &:before {
+      content: "\2014";
+      padding: {
+        right: 0.3em;
+        left: 0.3em;
+      }
+    }
   }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 1101px) {
     padding-left: 1.5em;
     border-left-width: 4px;
   }
@@ -138,7 +261,7 @@ article blockquote {
   /* Pull out to the right, modular scale based margins. */
   float: right;
   width: 45%;
-  margin: .5em 0 1em 1.5em;
+  margin: 0.5em 0 1em 1.5em;
 
   /* Baseline correction */
   position: relative;
@@ -150,7 +273,7 @@ article blockquote {
 .pullquote-left:before {
   /* Make left pullquotes align properly. */
   float: left;
-  margin: .5em 1.5em 1em 0;
+  margin: 0.5em 1.5em 1em 0;
 }
 
 /* @extend this to force long lines of continuous text to wrap */
@@ -162,3 +285,26 @@ article blockquote {
   word-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+}
+
+.articlemeta {
+  line-height: 1em;
+}
+.articlemeta > .plus > a {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+h2.entry-title {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 1100px) {
+  #sidebar .content {
+    font-size: 1.2em;
+  }
+}
