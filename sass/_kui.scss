@@ -62,60 +62,6 @@ header[role="banner"] {
   position: relative;
 }
 
-/* social-links */
-#social-links {
-  right: 0px;
-  bottom: 0px;
-  position: absolute;
-  @media screen and (max-width: 600px) {
-    position: static;
-  }
-  > ul {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    > li {
-      display: inline-block;
-      margin: 0px 6px;
-      overflow: hidden;
-    }
-  }
-}
-@mixin social-links-base($img) {
-  @include mask-image("socialis/glyph/" + $img + ".png");
-}
-.maskImage {
-  #social-links > ul > li > a {
-    background-color: #999;
-    display: block;
-    text-indent: -999999em;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    padding: 0px;
-  }
-
-  @each $name in github, twitter, tumblr, feed {
-    #social-links-#{$name} {
-      > a {
-        @include social-links-base(#{$name});
-        &:hover {
-          @if $name == twitter {
-            background-color: #39c;
-          } @else if $name == tumblr {
-            background-color: #357;
-          } @else if $name == feed {
-            background-color: #e93;
-          } @else {
-            background-color: #ccc;
-          }
-        }
-      }
-    }
-  }
-}
-/* /social-links */
-
 #content {
   margin: 8px auto;
   max-width: #{$max-width};

@@ -3,6 +3,10 @@ layout: page
 is_top: true
 ---
 <div id="top">
+  <!-- include about.html -->
+  {% include custom/asides/about.html %}
+  <!-- /include about.html -->
+
   {% if paginator.posts %}
     <div id="recent_posts">
       <h2>Recent posts</h2>
@@ -22,9 +26,4 @@ is_top: true
 
     </div>
   {% endif %}
-
-  <!-- include asides.html -->
-  {% include asides.html %}
-  <!-- /include asides.html -->
-
 </div>

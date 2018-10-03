@@ -74,9 +74,8 @@ github_sort: updated
 twitter_user: erjan_tj
 twitter_tweet_button: true
 
-# Google +1
-google_plus_one: false
-google_plus_one_size: medium
+# Linkedin
+linkedin_user: yerzhan-torgayev
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
@@ -100,3 +99,6 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Social Service Links
+social_service_links: true
