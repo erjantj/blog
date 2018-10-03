@@ -3,25 +3,25 @@ layout: page
 is_top: true
 ---
 <div id="top">
+  {% if paginator.posts %}
+    <div id="recent_posts">
+      <h2>Recent posts</h2>
 
-  <div id="recent_posts">
-    <h2>Recent posts</h2>
+      <ul>
+      {% for post in paginator.posts %}
+        <li>
+          <article>
+            <a rel="full-article" href="{{ post.url }}">{{ post.title }}</a>
+            （<time datetime="{{post.date}}" pubdate>{{post.date_text}}</time>）
+          </article>
+        </li>
+      {% endfor %}
+      </ul>
 
-    <ul>
-    {% for post in paginator.posts %}
-      <li>
-        <article>
-          <a rel="full-article" href="{{ post.url }}">{{ post.title }}</a>
-          （<time datetime="{{post.date}}" pubdate>{{post.date_text}}</time>）
-        </article>
-      </li>
-    {% endfor %}
-    </ul>
+      <p><a href="/blog/archives">&laquo; previous</a></p>
 
-    <p><a href="/blog/archives">&laquo; previous</a></p>
-
-  </div>
-
+    </div>
+  {% endif %}
 
   <!-- include asides.html -->
   {% include asides.html %}
