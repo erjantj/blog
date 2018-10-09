@@ -20,6 +20,7 @@ h4,
 h5,
 h6 {
   font-family: "Hiragino Mincho ProN", Georgia, Times, "Times New Roman", serif;
+  clear: both;
 }
 
 .site_metas {
@@ -66,6 +67,7 @@ header[role="banner"] {
   margin: 8px auto;
   max-width: #{$max-width};
   padding: 0 20px;
+  overflow: hidden;
   a {
     color: #33c;
   }
@@ -118,4 +120,15 @@ footer[role="contentinfo"] {
 }
 #dsq-reply {
   margin: 0.3em;
+}
+
+.block {
+  margin: 20px 0;
+  overflow: hidden;
+  display: block;
+}
+
+.block__img {
+  max-width: 200px;
+  float: left;
 }
