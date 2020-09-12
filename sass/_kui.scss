@@ -3,15 +3,21 @@
 $max-width: 900px;
 $base-font-color: #444;
 
+$color-dark: #1e1c1c;
+$color-text: #fff;
+$color-hover: #666;
+$color-link: #b3e5fc;
+
 #comments {
   display: none;
 }
 body {
   font-family: "Hiragino Mincho ProN", Georgia, Times, "Times New Roman", serif;
   font-size: 1em;
-  color: #{$base-font-color};
+  color: $color-text;
   margin: 0px;
   padding: 0px;
+  background-color: $color-dark;
 }
 
 h2,
@@ -24,10 +30,9 @@ h6 {
 }
 
 .site_metas {
-  background-color: #fff;
-  color: #{$base-font-color};
+  color: $color-text;
   a {
-    color: #{$base-font-color};
+    color: $color-text;
   }
 }
 
@@ -37,7 +42,7 @@ header[role="banner"] {
     text-decoration: none;
     &:hover {
       text-decoration: underline;
-      background-color: yellow;
+      background-color: $color-hover;
     }
   }
   hgroup {
@@ -69,13 +74,13 @@ header[role="banner"] {
   padding: 0 20px;
   overflow: hidden;
   a {
-    color: #33c;
+    color: $color-link;
   }
   a:visited {
-    color: #939;
+    color: $color-link;
   }
   a:hover {
-    background-color: yellow;
+    background-color: $color-hover;
   }
   dl {
     margin: 1em;
