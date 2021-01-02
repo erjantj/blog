@@ -1,4 +1,4 @@
-I"	<p><em>The Strange Case of Dr. Jekyll and Mr. Hyde</em> tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel’s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll’s loyal butler.</p>
+I"�<p><em>The Strange Case of Dr. Jekyll and Mr. Hyde</em> tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel’s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll’s loyal butler.</p>
 
 <hr />
 
@@ -20,7 +20,7 @@
 <p>Poole is a streamlined Jekyll site designed and built as a foundation for building more meaningful themes. Poole, and every theme built on it like this one, includes the following:</p>
 
 <ul>
-  <li>Complete Jekyll setup included (layouts, config, <a href="/erjantj.gihub.io/404.html">404</a>, <a href="/erjantj.gihub.io/atom.xml">RSS feed</a>, posts, <a href="/erjantj.gihub.io/archive">archive page</a>, and <a href="/erjantj.gihub.io/about">example page</a>)</li>
+  <li>Complete Jekyll setup included (layouts, config, <a href="/404.html">404</a>, <a href="/atom.xml">RSS feed</a>, posts, <a href="/archive">archive page</a>, and <a href="/about">example page</a>)</li>
   <li>Mobile friendly design and development</li>
   <li>Easily scalable text and component sizing with <code class="language-plaintext highlighter-rouge">rem</code> units in the CSS</li>
   <li>Support for a wide gamut of HTML elements</li>
