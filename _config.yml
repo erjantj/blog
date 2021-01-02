@@ -1,63 +1,48 @@
-# ----------------------- #
-#      Main Configs       #
-# ----------------------- #
-
-url: http://erjantj.github.io/erjantj.gihub.io
+# Setup
 title: erjantj
-subtitle: A blogging framework for hackers.
+url: https://erjantj.com
+paginate: 1
+baseurl: ""
+permalink: pretty
+
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# ga_analytics: UA-000000-0
+
+# Specify the author for blog posts
 author: Yerzhan Torgayev
-simple_search: https://www.google.com/search
-description:
 
-# Default date format is "ordinal" (resulting in "July 22nd 2007")
-# You can customize the format as defined in
-# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
-# Additionally, %o will give you the ordinal representation of the day
-date_format: "ordinal"
+# Custom vars
+version: 3.0.0
 
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
-subscribe_email:
-# RSS feeds can list your email address if you like
-email: yerzhan.torgayev@gmail.com
+# Navbar page list
+nav:
+  - title: Blog
+    url: /archive
 
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
-
-# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
-permalink: /blog/:year/:month/:day/:title/
-source: source
-destination: public
-plugins: plugins
-code_dir: downloads/code
-category_dir: blog/categories
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-highlighter: pygments # default python pygments have been replaced by pygments.rb
-
-paginate: 10          # Posts per page on the blog index
-paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
-recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
-excerpt_separator: "<!--more-->"
-
-titlecase: true       # Converts page and post titles to titlecase
-
-# list each of the sidebar modules you want to include, in the order you want them to appear.
-# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/github.html]
-
-# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-# and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
+  - title: About
+    url: /about
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -76,29 +61,6 @@ twitter_tweet_button: true
 
 # Linkedin
 linkedin_user: yerzhan-torgayev
-
-# Google Plus Profile
-# Hidden: No visible button, just add author information to search results
-googleplus_user:
-googleplus_hidden: false
-
-# Pinboard
-pinboard_user:
-pinboard_count: 3
-
-# Delicious
-delicious_user:
-delicious_count: 3
-
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
-
-# Google Analytics
-google_analytics_tracking_id:
-
-# Facebook Like
-facebook_like: false
 
 # Social Service Links
 social_service_links: true
