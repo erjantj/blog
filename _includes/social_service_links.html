@@ -1,0 +1,21 @@
+{% if site.social_service_links %}
+<div id="social-links">
+  <ul>
+    {% if site.github_user %}
+    <li id="social-links-github">
+      <a title="GitHub" target="_blank" href="https://github.com/{{site.github_user}}">github</a>
+    </li>
+    {% endif %}
+    {% if site.twitter_user %}
+    <li id="social-links-twitter">
+      <a title="Twitter" target="_blank" href="http://twitter.com/{{site.twitter_user}}">twitter</a>
+    </li>
+    {% endif %}
+    {% if site.linkedin_user %}
+    <li id="social-links-twitter">
+      <a title="Linkedin" target="_blank" href="https://linkedin.com/in/{{site.linkedin_user}}">linkedin</a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
+{% endif %}
